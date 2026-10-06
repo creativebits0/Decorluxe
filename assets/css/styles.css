@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #ececec;
+}
+
+.bg-image {
+	display: none;
+	background-image: url('../images/index-img.jpeg');
+}
+
+/*------------ Login container ------------*/
+
+.box-area {
+	width: 500px;
+}
+
+/*------------ main box ------------*/
+
+.main-box {
+	padding: 15px;
+}
+/*------------ Custom Placeholder ------------*/
+
+::placeholder {
+	font-size: 16px;
+
+}
+
+.rounded-corner {
+	border-radius: 30px;
+}
+
+/*------------ For small screens------------*/
+
+@media screen and (max-width:425px) {
+	.login {
+		background-color: #6F8FAF;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.box-area {
+		margin: 0 10px;
+
+	}
+
+	.main-box {
+		padding: 20px;
+	}
+
+	.logo {
+		margin-left: -20px;
+	}
+}
+
+/* Show background for screens 768px and larger (tablets, laptops, PCs) */
+@media (min-width: 768px) {
+	.bg-image {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/index-img.jpeg");
+		background-size: cover;
+		background-position: center;
+		filter: blur(8px);
+		z-index: -1;
+	}
+}
+
+
+/* ===================login Page End============================= */
+
+/* dashboard */
+
+body,
+html {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Poppins', sans-serif;
+	/* color:#555e58; */
+	font-weight: 400;
+	line-height: 2rem;
+	text-transform: capitalize;
+}
+
+
+a,
+a:hover,
+a:focus {
+	color: #333;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.main-dashboard {
+	position: relative;
+	width: 100%;
+	overflow: auto;
+}
+
+#sidebar {
+	position: fixed;
+	/* height: 100vh !important; */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	overflow: auto;
+	transition: all 0.3s;
+	background-color: #fff;
+	box-shadow: 0 0 30px 0 #05204Aa9;
+	/* box-shadow: 0 0 30px 0 rgba(36, 36, 36, 0.445); */
+	z-index: 1000;
+}
+
+.sidebar-dropdown-menu {
+    display: none;
+}
+
+.sidebar-dropdown-menu.show {
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	#sidebar {
+		width: 0;
+	}
+}
+
+@media only screen and (min-width:992px) {
+	#sidebar.active {
+		left: -250px;
+		height: 100% !important;
+		position: absolute !important;
+		overflow: visible !important;
+		top: 0;
+		z-index: 666;
+		float: left !important;
+		bottom: 0 !important;
+	}
+
+	#sidebar {
+		width: 250px;
+		padding-top: 10px;
+	}
+
+	#content {
+		width: calc(100% - 250px);
+		position: relative;
+		float: right;
+		transition: all 0.3s;
+	}
+
+	#content.active {
+		width: 100%;
+	}
+
+    	.closebtn {
+		display: none;
+	}
+
+}
+
+#sidebar .sidebar-header {
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+#sidebar ul li {
+	padding: 5px 10px;
+}
+
+
+#sidebar ul li a.active i {
+	color: #ffffff;
+}
+
+#sidebar ul li a.active,
+#sidebar ul li a:focus {
+	color: #ffffff;
+	background-color: #05204A;
+	border-radius: 10px;
+}
+
+#sidebar ul li a:hover {
+	color: #05204A;
+	/* color: 	#36454F; */
+	background-color: #DBE5FD;
+	border-radius: 10px;
+}
+
+
+#sidebar ul li a {
+	padding: 2px 10px;
+	font-size: 16px;
+	position: relative;
+	font-weight: 600;
+	display: block;
+    color: #05204A;
+	/* line-height: 30px; */
+}
+
+.sidebar li{
+	height: 40px;
+}
+
+#sidebar ul li a i {
+	position: relative;
+	margin-right: 15px;
+	top: 5px;
+	/* font-size: 24px; */
+	color: #05204A;
+	margin-left: 10px;
+}
+
+/*========================================================== sidebar style end ================================*/
+/*==========================================================main-content navbar-design start================================*/
+
+
+#content {
+	position: relative;
+	transition: all 0.3s;
+	background: #f9fafc;
+}
+
+.top-navbar {
+	width: 100%;
+	z-index: 9;
+	position: relative;
+	padding: 15px 30px;
+	/* background-color: #353b48; */
+	/* background-color: #36454F; */
+	background-color: #05204A;
+
+}
+
+.topbar {
+	width: 100%;
+	position: relative;
+}
+
+.main-content {
+	padding:20px 30px 0px 0px;
+	position: relative;
+	width: 100%;
+	border: #f9fafc 5px solid;
+	/* background-color:#b7c3d5 ; */
+}
+
+.menubar {
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 45px;
+	margin-right: 20px;
+	border: none;
+	color: #fff;
+	background-color: #6F8695;
+	/* background-color:  #4a5263; */
+}
+
+.menubar span {
+	margin: 9px;
+	padding: 0px;
+	transform: rotate(90deg);
+}
+
+
+.navbar-nav>li {
+	color: #fff;
+	border-radius: 50px;
+	/* background-color: #4a5263; */
+
+}
+
+.navbar-nav>li>a {
+	color: #fff;
+}
+
+
+.navbar .notification {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	display: block;
+	/* font-size: 9px; */
+	border: 0px;
+	font-size: 15px;
+	background-color: #970303;
+	min-width: 20px;
+	text-align: center;
+	padding: 1px 5px;
+	/* height: 15px; */
+	border-radius: 50%;
+	line-height: 14px;
+}
+
+
+.navbar-nav li a {
+	position: relative;
+	display: block;
+	padding: 4px 10px !important;
+}
+
+.nav-item .nav-link .material-icons {
+	position: relative;
+	top: 4px;
+	font-size: 24px;
+
+}
+
+.user-profilebar .dropdown-menu li a:hover {
+	background-color: #6F8FAF;
+	border-radius: 5px;
+
+}
+
+.nav-item .nav-link .profile {
+	position: relative;
+	top: 4px;
+	font-size: 36px;
+
+}
+
+/* modals */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 70px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 40%;
+  animation: fadeIn 0.3s;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/*==========================================================footer design start===============================*/
+
+
+footer {
+	/* background-color: #353b48; */
+	background-color: #05204A;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px 30px;
+	position: relative;
+	width: 100%;
+}
+
